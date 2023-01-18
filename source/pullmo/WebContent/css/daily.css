@@ -1,0 +1,226 @@
+
+		.bener {
+			width: 100%;
+			height: 400px;
+			background: blue;
+		}
+
+
+
+
+		#mainImg1 {
+			width: 1903px;
+			height: 460px;
+		}
+
+		#available {
+			width: 1168px;
+			height: 60px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center
+		}
+
+		#av1 {
+			display: flex;
+			align-items: center;
+		}
+
+		#tip {
+			width: 54.3px;
+			height: 36px;
+			text-align: center;
+			align-items: center;
+			color: white;
+			background: #ff962B;
+			border-radius: 30px;
+			padding-top: 10px;
+			margin-right: 5px;
+		}
+
+		#recom {
+			width: 1200px;
+			height: 504px;
+			margin-top: 60px;
+			background: white;
+		}
+
+		#del-define {
+			border-style: solid;
+		}
+
+		#recom-logo {
+			width: 167px;
+			height: 36px;
+			padding: 0, 0, 20px;
+		}
+
+		.swiper-wrapper {
+			width: 1200px;
+			height: 448px;
+			display: flex;
+			justify-content: space-between
+		}
+
+		.recom-goods-img {
+			height: 268px;
+			width: 268px;
+			margin: 0;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+
+		}
+
+		.goods-info {
+
+			width: 268px;
+			height: 180px;
+			background: #f7f7f7;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+
+		}
+
+		.goods-brand {
+			width: 236px;
+			height: 24px;
+			display: block;
+		}
+
+		.goods-name {
+			width: 208px;
+			height: 48px;
+			display: block;
+		}
+
+		.goods-price {
+			width: 236px;
+			height: 28px;
+			display: block;
+			margin-left: 15px;
+		}
+
+		.price-cost {
+			display: block;
+			font-size: 20px;
+			padding-top: 30px;
+		}
+
+		.recom-part {
+			width: 268px;
+			height: 448px;
+
+		}
+
+		.goods-delfree {
+			width: 69px;
+			height: 26px;
+			background: #f7f7f7;
+			display: inline;
+			margin-left: 15px;
+
+		}
+
+		.add-cart {
+			width: 36px;
+			height: 36px;
+			border-radius: 30px;
+			border: #80c342;
+			background: #80c342;
+			float: right;
+			margin-right: 15px;
+		}
+
+		.cart {
+			width: 24px;
+			height: 24px;
+		}
+
+		.tabs {
+			width: 1903px;
+			height: 73px;
+			background: #f7f7f7;
+			justify-content: center;
+			display: flex;
+			font-weight: 700;
+		}
+
+		.daily-tab-list {
+			width: 400px;
+			height: 72px;
+			text-align: center;
+			padding-top: 15px;
+		}
+
+		.nav-icon {
+			width: 30px;
+			height: 30px;
+			display: inline;
+
+
+		}
+
+		.result-header {
+			width: 1200px;
+			height: 55px;
+			background: white;
+			justify-content: space-between;
+			display: flex;
+			font-size: 20px;
+			margin-top: 15px;
+
+		}
+
+		/* 
+		.tab_content {
+			display: flex;
+			flex-wrap: wrap;
+		} */
+
+		.product-list {
+			width: 1200px;
+			display: flex;
+			flex-wrap: wrap;
+
+		}
+
+		.product {
+			width: 208px;
+			height: 390px;
+			margin: 16px;
+		}
+
+		.imgg {
+			width: 208px;
+			height: 208px;
+			display: block;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+		}
+
+		.c-infor {
+			width: 208px;
+			height: 181px;
+			background: #f7f7f7;
+			display: inline-block;
+
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;
+		}
+
+		.count {
+			color: #78ed5e;
+		}
+
+
+		.daily-banner{
+			width: 1200px;
+		}
+		.goods-brand,
+		.goods-name,
+		.price-cost {
+			margin-left: 10px;
+		}
+		.goods-brand{
+			margin-top: 5px;
+		}

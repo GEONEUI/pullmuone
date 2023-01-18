@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.xtext.xbase"
+      label="%featureName"
+      version="2.12.0.v20170519-1412"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+   <license url="http://www.eclipse.org/legal/epl-v10.html">
+      %license
+   </license>
+   <copyright>
+      Copyright (c) 2009 itemis AG (http://www.itemis.eu) and others.
+
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License
+v1.0 which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html Description here.
+   </copyright>
+
+   <includes
+         id="org.eclipse.xtext.xbase.lib"
+         version="2.12.0.v20170518-0758"/>
+
+   <plugin
+         id="org.eclipse.xtext.xbase"
+         download-size="2359"
+         install-size="6345"
+         version="2.12.0.v20170519-0752"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xtext.xbase.source"
+         download-size="1954"
+         install-size="8973"
+         version="2.12.0.v20170519-0752"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xtext.xbase.ui"
+         download-size="517"
+         install-size="1157"
+         version="2.12.0.v20170519-0809"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xtext.xbase.ui.source"
+         download-size="312"
+         install-size="952"
+         version="2.12.0.v20170519-0809"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xtext.xbase.ide"
+         download-size="588"
+         install-size="2638"
+         version="2.12.0.v20170519-0752"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xtext.xbase.ide.source"
+         download-size="439"
+         install-size="5720"
+         version="2.12.0.v20170519-0752"
+         unpack="false"/>
+
+</feature>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.eclipse.xtext.xtext.ui"
+      label="%featureName"
+      version="2.12.0.v20170519-1412"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      Copyright (c) 2009 itemis AG (http://www.itemis.eu) and others.
+
+All rights reserved. This program and the accompanying materials
+are made available under the terms of the Eclipse Public License
+v1.0 which accompanies this distribution, and is available at
+http://www.eclipse.org/legal/epl-v10.html Description here.
+   </copyright>
+   <license url="http://www.eclipse.org/legal/epl-v10.html">
+      %license
+   </license>
+   <includes
+         id="org.eclipse.xtext.ui"
+         version="2.12.0.v20170519-1412"/>
+
+   <requires>
+      <import plugin="org.eclipse.emf.mwe2.runtime" version="2.7.0" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="org.eclipse.xtext.activities"
+         download-size="4"
+         install-size="4"
+         version="2.12.0.v20170519-0809"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xtext.activities.source"
+         download-size="2"
+         install-size="2"
+         version="2.12.0.v20170519-0809"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xtext.xtext.ui"
+         download-size="223"
+         install-size="490"
+         version="2.12.0.v20170519-0809"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xtext.xtext.ui.source"
+         download-size="130"
+         install-size="386"
+         version="2.12.0.v20170519-0809"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xtext.xtext.ui.graph"
+         download-size="63"
+         install-size="120"
+         version="2.12.0.v20170519-0809"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xtext.xtext.ui.graph.source"
+         download-size="41"
+         install-size="88"
+         version="2.12.0.v20170519-0809"
+         unpack="false"/>
+
+   <plugin
+         id="org.eclipse.xtext.doc"
+         download-size="6665"
+         install-size="7645"
+         version="2.12.0.v20170519-0809"/>
+
+</feature>

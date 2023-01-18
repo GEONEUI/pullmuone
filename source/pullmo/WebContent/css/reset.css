@@ -1,0 +1,86 @@
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+caption, tfoot,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	box-sizing:border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+
+
+body {
+	line-height: 1;
+	font-family: 'Noto Sans KR', sans-serif;
+	overflow-x:hidden;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+
+.inner{
+	width: 1200px;
+	margin:0 auto;
+}
+
+
+	.location{
+		display: flex;
+		flex: 1;
+		justify-content: flex-end;
+		padding: 28px 0;
+		width: 1200px;
+		margin:0 auto;
+	}
+
+	.location a{
+			display: block;
+			position: relative;
+			padding: 0 15px;
+			font-size: 14px;
+			letter-spacing: -1.05px;
+			color: #666;
+	}
+
+	.location a:last-child{
+		padding-right: 0;
+	  font-weight: 700;
+	}

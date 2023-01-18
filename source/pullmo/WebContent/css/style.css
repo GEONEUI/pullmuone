@@ -1,0 +1,212 @@
+
+.sec_personal{
+	background: #fafafa;
+	padding:40px 0;
+}
+.personal{
+	padding: 50px 60px;
+	border-radius: 40px 0 40px 0;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 5%);
+	height: 300px;
+	width: 100%;
+	background: #fff;
+	border:solid 1px #e5e5e5;
+}
+
+
+.login_icon_area{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+
+
+/* login_service */
+.login_service{}
+.login_service i{font-size: 18px; margin-left: 0.1rem;}
+
+.login_service h2{
+	display: block;
+    margin-bottom: 34px;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: -2.25px;
+    color: #333;
+}
+
+.login_service a{letter-spacing:-1.5px; margin-bottom:0.5rem; font-size:20px; margin-right:0.4rem;}
+.login_service a:hover{color:#5e9731; transition:0.3s;}
+.login_service h2 i{margin-bottom: 1rem; font-size: 40px;}
+
+.icon_service li{display:flex;}
+
+.icon_service li a{
+		display:flex;
+		align-items:center;
+		justify-content:center;
+	    width: 90px;
+		height: 134px;
+		flex-direction:column;
+		margin-right: 2rem;
+}
+
+.icon_service li a:hover{
+	color: #86c852;
+}
+
+.icon_service li a:hover p.icon{
+	  border:2px solid #86c852 !important;
+}
+
+
+.icon_service li a p{
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.icon_service li a p.icon{
+	width: 100%;
+	height: 90px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	border-radius: 40px 0 40px 0;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 5%);
+	border: solid 1px #e5e5e5;
+	margin-bottom: 1.2rem;
+}
+
+.icon i{font-size: 32px;}
+.login_service h2 span{}
+.login_service h2 em{font-weight: bold;}
+
+/* icon_service */
+.icon_service{}
+
+
+/* sec_banner */
+.sec_banner{margin-bottom: 70px; text-align: center;}
+
+
+/* sec_ad */
+.sec_ad{margin-bottom: 70px;}
+.sec_ad .ad{display:flex; justify-content:space-between;}
+.sec_ad .ad img{width: 580px;}
+
+
+/* ad */
+     .swiper2 {
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
+
+      .swiper-slide2 img{
+        background-position: center;
+        background-size: cover;
+        width: 300px;
+        height: 300px;
+      }
+
+/* sec_info */
+.sec_info{margin-bottom: 70px;}
+.sec_info .info{
+	display:flex;
+	justify-content:space-between;
+}
+.sec_info .info .info_item{
+    width: 270px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 10px 0;
+}
+
+.sec_info .info .info_item:nth-child(1){
+	border-top: 2px solid #000;
+}
+
+.sec_info .info .info_item:nth-child(2){
+	border-top: 2px solid #000;
+}
+
+.sec_info .info .info_item:nth-child(3){
+    border-radius: 40px 0 40px 0;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 5%);
+    border: solid 1px #e5e5e5;
+	background: #75cb4f;
+	padding: 0px 27px;
+}
+
+
+.sec_info .info .info_item:nth-child(4){
+    border-radius: 40px 0 40px 0;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 5%);
+    border: solid 1px #e5e5e5;
+	background: #5e56a1;
+	padding: 0px 27px;
+}
+
+
+.sec_info .info .info_item:nth-child(3) h2{color: #fff; position: relative;}
+.sec_info .info .info_item:nth-child(3) h2::after{
+	content: "";
+    display: block;
+    position: absolute;
+    top: -35px;
+    left: 0;
+    width: 22px;
+    height: 3px;
+    background: #fff;
+}
+.sec_info .info .info_item:nth-child(3) figure{display:flex; align-items:center; justify-content:center;}
+.sec_info .info .info_item:nth-child(3) figure img{height: 50%;}
+
+
+.sec_info .info .info_item:nth-child(4) h2{color: #fff; position: relative;}
+.sec_info .info .info_item:nth-child(4) h2::after{
+	content: "";
+    display: block;
+    position: absolute;
+    top: -35px;
+    left: 0;
+    width: 22px;
+    height: 3px;
+    background: #fff;
+}
+.sec_info .info .info_item:nth-child(4) figure{display:flex; align-items:center; justify-content:center;}
+.sec_info .info .info_item:nth-child(4) figure img{height: 50%;}
+
+
+
+
+
+.sec_info .info .info_item p{
+    margin-bottom: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -1.2px;
+    color: #333;
+}
+.sec_info .info .info_item h2{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -1.8px;
+    color: #333;
+}
+.sec_info .info .info_item span{
+	font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: -1.05px;
+    color: #666;
+}
+    
+.sec_info .info .info_item figure {height: 135px; margin-left: auto; margin-top: 40px;}
+.sec_info .info .info_item figure img{height: 100%;}
