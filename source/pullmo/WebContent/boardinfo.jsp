@@ -92,7 +92,7 @@
 										<li>작성자 : <%=bdto.getWriter() %></li>
 										<li>작성날짜 : <%=bdto.getReg_date() %></li>
 									</ul>
-									<p class="context">내용</p>
+									<p class="context"><%=bdto.getContext()%>/p>
 								</div>
 							</div>
 							<div class="reple">
