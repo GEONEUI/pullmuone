@@ -12,8 +12,6 @@
 	}
 	
 
-	
-	
 %>
 
 <!doctype html>
