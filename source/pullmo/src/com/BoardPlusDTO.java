@@ -82,6 +82,16 @@ public class BoardPlusDTO {
 	public void setContext(String context) {
 		this.context = context;
 	}
+
+
+	@Override
+	public String toString() {
+		return "BoardPlusDTO [num=" + num + ", writer=" + writer + ", password=" + password + ", reg_date=" + reg_date
+				+ ", ref=" + ref + ", context=" + context + "]";
+	}
+	
+	
+	
 	
 	
 	

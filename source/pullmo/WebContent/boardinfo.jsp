@@ -1,3 +1,6 @@
+<%@page import="com.BoardPlusDTO"%>
+<%@page import="java.util.Vector"%>
+<%@page import="com.BoardPlusDAO"%>
 <%@page import="com.UserDAO"%>
 <%@page import="com.BoardDTO"%>
 <%@page import="com.BoardDAO"%>
@@ -5,14 +8,23 @@
     pageEncoding="UTF-8"%>
     
  <%
+ 	//넘어온 번호
  	int num = Integer.parseInt(request.getParameter("num"));
  	UserDAO dao = new UserDAO();
  	BoardDAO bdao = new BoardDAO();
  	BoardDTO bdto = bdao.boardSelectOne(num);
  	
+ 	BoardPlusDAO pdao = new BoardPlusDAO();
+ 	Vector<BoardPlusDTO> pdto = pdao.selectOnePlus(num);
  	
+ 	
+
+ 	
+
  	String id = (String) session.getAttribute("id");
  	String password = dao.getPass(id);
+ 	
+
  %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -93,7 +105,10 @@
 										<li>작성날짜 : <%=bdto.getReg_date() %></li>
 									</ul>
 									<p class="context"><%=bdto.getContext()%></p>
+<<<<<<< HEAD
 									
+=======
+>>>>>>> b0023376fdbbd86a35c9a4f332ae97ad483ba29d
 								</div>
 							</div>
 							<div class="reple">
@@ -106,7 +121,8 @@
 											<div class="line">
 												<input type="hidden" name="writer" value="<%=id %>">
 												<input type="hidden" name="password" value="<%=password %>">
-												<input type="hidden" name="ref" value="<%=bdto.getNum() %>">
+												<input type="hidden" name="ref" value="<%=num %>">
+												<input type="hidden" name="num" value="<%=num %>">
 												<input type="text" name="context">
 												<input type="submit" value="댓글작성">
 											</div>
@@ -115,20 +131,22 @@
 								</div>
 							</div>
 							<div class="reple">
+							<%
+								for(int i=0; i<pdto.size() ;i++){
+									BoardPlusDTO p = pdto.get(i);		
+							%>
 								<div class="reple_item">
 									<ul>
-										<li class="rwriter">dbrjsdml</li>
-										<li class="rtime">20212</li>
+										<li class="rwriter"><%=p.getWriter() %></li>
+										<li class="rtime"><%=p.getReg_date() %></li>
 									</ul>
-									<h5>헐 미친</h5>
+									<h5><%=p.getContext() %></h5>
 								</div>
-								<div class="reple_item">
-									<ul>
-										<li class="rwriter">dbrjsdml</li>
-										<li class="rtime">20212</li>
-									</ul>
-									<h5>헐 미친</h5>
-								</div>
+							<%		
+								}
+							
+							%>
+								
 							</div>
 						</div>
 					</div>

@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Vector;
 
 public class BoardPlusDAO {
 
@@ -36,7 +37,7 @@ public class BoardPlusDAO {
 		
 		try {
 			//쿼리문작성
-			String sql = "insert into board values(null, ?, ?, sysdate(), ?, ?)";
+			String sql = "insert into boardplus values(null, ?, ?, sysdate(), ?, ?)";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, plus.getWriter());
 			pstmt.setString(2, plus.getPassword());
@@ -49,6 +50,42 @@ public class BoardPlusDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	
+	//써져있는 댓글 가져오기
+	public Vector<BoardPlusDTO> selectOnePlus(int num) {
+		Vector<BoardPlusDTO> v = new Vector<>();
+		
+		
+		getConnet();
+		
+		try {
+			//쿼리문작성
+			String sql = "select * from boardplus where ref = ? order by num desc";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				BoardPlusDTO pdto = new BoardPlusDTO();
+				pdto.setNum(rs.getInt(1));
+				pdto.setWriter(rs.getString(2));
+				pdto.setPassword(rs.getString(3));
+				pdto.setReg_date(rs.getDate(4).toString());
+				pdto.setRef(rs.getInt(5));
+				pdto.setContext(rs.getString(6));
+				
+				v.add(pdto);
+				
+			}
+			
+			
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return v;
 	}
 
 }

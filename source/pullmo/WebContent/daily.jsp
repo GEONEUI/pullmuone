@@ -7,7 +7,7 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String id=(String) session.getAttribute("id");
-	System.out.println(id+"asdasd");
+	System.out.println(id);
 	ProductDAO pdao = new ProductDAO();
 	Vector<ProductDTO> list = pdao.selectAll();
 	
@@ -160,9 +160,11 @@
 								<div class="price-cost"></div>
 								<span class="goods-price"><b><%=dto.getPrice()%></b>원</span>
 								<div class="goods-delfree">무료배송</div>
-								<button class="add-cart">
-									<img src="./image/showcart.png" alt="" class="cart">
-								</button>
+								<form action="dailyProc.jsp" name="num" value="<%=dto.getNum()%>">
+									<button class="add-cart">
+										<img src="./image/showcart.png" alt="" class="cart">
+									</button>
+								</form>
 							</div></li>
 					<%
 						}
@@ -198,9 +200,11 @@
 								<div class="price-cost"></div>
 								<span class="goods-price"><b><%=dto.getPrice()%></b>원</span>
 								<div class="goods-delfree">무료배송</div>
-								<button class="add-cart">
-									<img src="./image/showcart.png" alt="" class="cart">
-								</button>
+								<form action="dailyProc.jsp" name="num" value="<%=dto.getNum()%>">
+									<button class="add-cart">
+										<img src="./image/showcart.png" alt="" class="cart">
+									</button>
+								</form>
 							</div></li>
 
 
