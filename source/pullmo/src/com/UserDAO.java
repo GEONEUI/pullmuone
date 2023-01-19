@@ -10,7 +10,7 @@ import jdk.internal.dynalink.support.TypeUtilities;
 
 public class UserDAO {
 	
-	String id = "root";
+	String id = "java";
 	String pw = "mysql";
 	String url = "jdbc:mysql://localhost:3306/fullmo";
 	

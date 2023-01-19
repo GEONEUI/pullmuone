@@ -8,7 +8,7 @@ import java.util.Vector;
 
 public class BoardPlusDAO {
 
-	String id = "root";
+	String id = "java";
 	String pw = "mysql";
 	String url = "jdbc:mysql://localhost:3306/fullmo";
 

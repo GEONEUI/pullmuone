@@ -105,6 +105,10 @@
 										<li>작성날짜 : <%=bdto.getReg_date() %></li>
 									</ul>
 									<p class="context"><%=bdto.getContext()%></p>
+<<<<<<< HEAD
+=======
+									
+>>>>>>> d6f900e1b459a02ec7d475b54a26df0fc6c074eb
 								</div>
 							</div>
 							<div class="reple">

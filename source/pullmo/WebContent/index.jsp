@@ -58,7 +58,6 @@
 							<%
 								}
 							%>
-						
 						</h2>
 						<%
 							if(id.equals("admin")){%>
@@ -76,11 +75,9 @@
 								<a href="myinfo.jsp">내정보 <i class="fa-solid fa-circle-user"></i></a>
 								<a href="indexProc.jsp?logout=1">로그아웃 <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
 							</div>
-							
 						<%
 							}
 						%>
-						
 					</div>
 					<ul class="icon_service">
 						<li>
