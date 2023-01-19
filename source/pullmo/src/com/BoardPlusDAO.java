@@ -7,9 +7,9 @@ import java.sql.ResultSet;
 
 public class BoardPlusDAO {
 
-	String id = "root";
+	String id = "java";
 	String pw = "mysql";
-	String url = "jdbc:mysql://localhost:3306/fullmo";
+	String url = "jdbc:mysql://localhost:3306/pulmoo";
 
 	Connection conn;
 	PreparedStatement pstmt;

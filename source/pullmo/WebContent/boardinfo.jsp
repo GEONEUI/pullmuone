@@ -93,7 +93,7 @@
 										<li>작성날짜 : <%=bdto.getReg_date() %></li>
 									</ul>
 									<p class="context"><%=bdto.getContext()%></p>
-									풀테스트 합니다.
+									
 								</div>
 							</div>
 							<div class="reple">
