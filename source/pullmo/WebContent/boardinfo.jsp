@@ -7,25 +7,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
- <%
- 	//넘어온 번호
- 	int num = Integer.parseInt(request.getParameter("num"));
- 	UserDAO dao = new UserDAO();
- 	BoardDAO bdao = new BoardDAO();
- 	BoardDTO bdto = bdao.boardSelectOne(num);
- 	
- 	BoardPlusDAO pdao = new BoardPlusDAO();
- 	Vector<BoardPlusDTO> pdto = pdao.selectOnePlus(num);
- 	
- 	
+    
 
- 	
 
- 	String id = (String) session.getAttribute("id");
- 	String password = dao.getPass(id);
- 	
 
- %>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -92,7 +79,40 @@
 			</style>
 </head>
 <body>
-				<%@ include file="header.jsp" %>
+
+
+		<%@ include file="header.jsp" %>
+						
+		<%
+		 	
+		 	String id = (String) session.getAttribute("id");
+			//넘어온 번호
+			int num = Integer.parseInt(request.getParameter("num"));
+			
+			if(id == null){%>
+					
+					<script>
+						alert('로그인하세요.');
+						history.go(-1);
+					</script>
+		<%
+			}
+		%>
+		
+		
+		<%
+			
+			UserDAO dao = new UserDAO();
+			BoardDAO bdao = new BoardDAO();
+			BoardDTO bdto = bdao.boardSelectOne(num);
+			
+		 	BoardPlusDAO pdao = new BoardPlusDAO();
+		 	Vector<BoardPlusDTO> pdto = pdao.selectOnePlus(num);
+		 	String password = dao.getPass(id); 	
+		 	
+	
+		%>
+ 
 		
 					<div class="sec_table">
 						<div class="inner">

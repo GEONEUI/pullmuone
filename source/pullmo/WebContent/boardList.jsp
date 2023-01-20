@@ -7,7 +7,7 @@
 <%
 	
 	String id = (String)session.getAttribute("id");
-
+	System.out.println(id);
 	if(id == null){
 		id = "1";
 	};
@@ -125,12 +125,11 @@
 									
 									<div class="line">
 										<div class="num"><%=dto.getNum() %></div>
-										<div class="subject"><a href="boardinfo.jsp?num=<%=dto.getNum() %>"><%=dto.getSubject()%></a></div>
+										<div class="subject"><a class="dd" onclick="ee()" href="boardinfo.jsp?num=<%=dto.getNum() %>"><%=dto.getSubject()%></a></div>
 										<div class="writer"><%=dto.getWriter()%></div>
 										<div class="reg_date"><%=dto.getReg_date()%></div>
 										<div class="readcount"><%=dto.getReadcount()%></div>
 									</div>
-									
 									<%
 										}
 									
@@ -146,6 +145,7 @@
 			
 			<script>
 			   	var a = "<%=id%>";
+			   	
 				btnElem = document.querySelector('.btn');
 				btnElem.addEventListener('click', function(){
 					if(a == "1"){
@@ -154,6 +154,17 @@
 						location.href="boardWriteForm.jsp";
 					}
 				});
+				var dd = document.querySelectorAll('.dd');
+			
+				
+
+				
+				
+
+				
+
+
+
 			</script>
 	</body>
 </html>
