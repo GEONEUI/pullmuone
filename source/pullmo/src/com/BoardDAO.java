@@ -138,6 +138,38 @@ public class BoardDAO {
 		}
 		
 		
+		//게시판제거
+		public void boardRemove(int num) {
+			getConnet();
+			
+			try {
+				String sql = "delete from board where num = ?";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setInt(1, num);
+				pstmt.executeUpdate();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		//게시판 업데이트
+		public void boardUpdate(BoardDTO been) {
+			getConnet();
+			
+			try {
+				String sql = "update board set context = ?, subject = ? where num = ?";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, been.getContext());
+				pstmt.setString(2, been.getSubject());
+				pstmt.setInt(3, been.getNum());
+				pstmt.executeUpdate();
+				
+				conn.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
 		
 		public static void main(String [] args) {
 			UserDAO a = new UserDAO();

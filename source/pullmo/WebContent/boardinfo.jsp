@@ -56,16 +56,19 @@
 				.line input[type="text"]{width:90%; height:50px;}
 				.line input[type="submit"]{}
 				
-				
-
-				
+			
 				.ad{font-size:18px;}
-				.ad .num{padding:15px 0;}
+				.ad .adtop{display:flex; justify-content:space-between;}
+				.ad .adtop .num{padding:15px 0;}
+				.ad .adtop .crud{}
+				.ad .adtop .crud button{
+					padding:5px;
+					cursor:pointer;
+				}
 				.ad .subject{padding-bottom:10px; font-weight:bold; font-size:25px;}
 				.ad ul{display:flex; font-size:17px; color:#555; padding-bottom:50px;}
 				.ad ul li{margin-right:10px;}
 				.ad .context{font-size:26px;}
-
 				
 				.reple .reple_item{border-bottom:1px solid #e5e5e5; padding:25px; background: #f7f7f7;}
 				
@@ -79,8 +82,6 @@
 			</style>
 </head>
 <body>
-
-
 		<%@ include file="header.jsp" %>
 						
 		<%
@@ -113,18 +114,24 @@
 	
 		%>
  
-		
 					<div class="sec_table">
 						<div class="inner">
 							<div class="table">
 								<h2><%=bdto.getSubject() %></h2>
 								<div class="ad">
-									<p class="num">글번호 : <%=bdto.getNum() %></p>
+									<div class="adtop">
+										<p class="num">글번호 : <%=bdto.getNum() %></p>
+										<div class="crud">
+											<button onclick="CheckUpdate()">수정하기</button>
+											<button onclick="CheckDelete()">삭제하기</button>
+											<button onclick="history()">목록보기</button>
+										</div>
+									</div>
 									<ul>
 										<li>작성자 : <%=bdto.getWriter() %></li>
 										<li>작성날짜 : <%=bdto.getReg_date() %></li>
 									</ul>
-									<p class="context"><%=bdto.getContext()%></p>
+									<pre class="context"><%=bdto.getContext()%></pre>
 								</div>
 							</div>
 							<div class="reple">
@@ -169,5 +176,36 @@
 
 
 			<%@ include file="footer.jsp" %>
+			
+			<script>
+			
+				var userId = "<%=id%>";
+				var writeID = "<%=bdto.getWriter() %>";
+				var link = "<%=bdto.getNum() %>";
+				
+			
+				function CheckDelete(){
+					if(userId == writeID){
+						location.href="boardRemove.jsp?num=" + link;
+					}else{
+						alert("본인게시글만 삭제 가능합니다.");
+					}
+				}
+				
+				function CheckUpdate(){
+					if(userId == writeID){
+						location.href="boardUpdateForm.jsp?num=" + link;
+					}else{
+						alert("본인게시글만 수정 가능합니다.");
+					}
+				}
+				
+				function history(){
+					location.href="boardList.jsp";	
+				}
+				
+				
+				
+			</script>
 	</body>
 </html>
