@@ -16,10 +16,7 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
+
 <%@ include file="front_header.jsp"%>
 <body>
 	<%@ include file="header.jsp"%>
@@ -43,30 +40,30 @@
 							for (int i = 0; i < 4; i++) {
 								ProductDTO dto = list.get(i);
 						%>
-						<div class="recom-part">
+						<a href="dailyInfo.jsp?num=<%=dto.getNum() %>" class="recom-part">
 							<img src="<%=dto.getMainimg()%>" alt="" class="recom-goods-img">
 							<div class="goods-info">
-								<span class="goods-brand"><b><%=dto.getCategory()%></b></span> <span
-									class="goods-name"><%=dto.getName()%></span>
-								<div class="price-cost"></div>
-								<span class="goods-price"><b><%=dto.getPrice()%></b>원</span>
-								<div class="goods-delfree">무료배송</div>
-								<form action="dailyProc.jsp" >
-									<button class="add-cart" style="cursor: pointer"onclick="functtion(e)" 
-									 name="num" value="<%=dto.getNum()%>">
-								<input type="hidden" name="user_id" value="<%= (String) session.getAttribute("id")%>"> 
+								<span class="goods-brand"><%=dto.getCategory()%></span>
+								<span class="goods-name"><%=dto.getName()%></span>
+								<span class="goods-price"><%=dto.getPrice()%>원</span>
+								<div class="goods-wrap-item">	
+									<div class="goods-delfree">무료배송</div>
+									<form action="dailyProc.jsp" >
+										<button class="add-cart" style="cursor: pointer"onclick="functtion(e)"  name="num" value="<%=dto.getNum()%>">
+											<input type="hidden" name="user_id" value="<%= (String) session.getAttribute("id")%>"> 
 										<img src="./image/showcart.png" alt="" class="cart">
 									</button>
-								</form>
-
+									</form>
+								</div>
+									
 							</div>
-						</div>
+						</a>
 						<%
 							}
 						%>
+						
 					</div>
 				</div>
-			</div>
 		</div>
 	</div>
 	<div id="contents">
@@ -102,7 +99,7 @@
 									name="priceN"><span>높은가격</span></label> <label for=""><input
 									type="radio" value="low-price" name="priceN"><span>낮은가격</span></label>
 							</div>
-
+c
 						</div>
 					</div>
 					<ul class="product-list">
@@ -111,20 +108,24 @@
 							ProductDTO dto = list.get(4 + i);
 					%>
 					
-						<li class="product"><img class="imgg"
-							src="<%=dto.getMainimg()%>" />
-							<div class="c-infor">
-								<span class="goods-brand"><b><%=dto.getCategory()%></b></span>
+													<a href="dailyInfo.jsp?num=<%=dto.getNum() %>" class="recom-part">
+							<img src="<%=dto.getMainimg()%>" alt="" class="recom-goods-img">
+							<div class="goods-info">
+								<span class="goods-brand"><%=dto.getCategory()%></span>
 								<span class="goods-name"><%=dto.getName()%></span>
-								<div class="price-cost"></div>
-								<span class="goods-price"><b><%=dto.getPrice()%></b>원</span>
-								<div class="goods-delfree">무료배송</div>
-								<form action="dailyProc.jsp" name="num" value="<%=dto.getNum()%>">
-									<button class="add-cart">
+								<span class="goods-price"><%=dto.getPrice()%>원</span>
+								<div class="goods-wrap-item">	
+									<div class="goods-delfree">무료배송</div>
+									<form action="dailyProc.jsp" >
+										<button class="add-cart" style="cursor: pointer"onclick="functtion(e)"  name="num" value="<%=dto.getNum()%>">
+											<input type="hidden" name="user_id" value="<%= (String) session.getAttribute("id")%>"> 
 										<img src="./image/showcart.png" alt="" class="cart">
 									</button>
-								</form>
-							</div></li>
+									</form>
+								</div>
+									
+							</div>
+						</a>
 					
 					<%
 						}
@@ -152,20 +153,24 @@
 						for (int i = 0; i < 7; i++) {
 							ProductDTO dto = list.get(16 + i);
 					%>
-						<li class="product"><img class="imgg"
-							src="<%=dto.getMainimg()%>" />
-							<div class="c-infor">
-								<span class="goods-brand"><b><%=dto.getCategory()%></b></span>
+													<a href="dailyInfo.jsp?num=<%=dto.getNum() %>" class="recom-part">
+							<img src="<%=dto.getMainimg()%>" alt="" class="recom-goods-img">
+							<div class="goods-info">
+								<span class="goods-brand"><%=dto.getCategory()%></span>
 								<span class="goods-name"><%=dto.getName()%></span>
-								<div class="price-cost"></div>
-								<span class="goods-price"><b><%=dto.getPrice()%></b>원</span>
-								<div class="goods-delfree">무료배송</div>
-								<form action="dailyProc.jsp" name="num" value="<%=dto.getNum()%>">
-									<button class="add-cart">
+								<span class="goods-price"><%=dto.getPrice()%>원</span>
+								<div class="goods-wrap-item">	
+									<div class="goods-delfree">무료배송</div>
+									<form action="dailyProc.jsp" >
+										<button class="add-cart" style="cursor: pointer"onclick="functtion(e)"  name="num" value="<%=dto.getNum()%>">
+											<input type="hidden" name="user_id" value="<%= (String) session.getAttribute("id")%>"> 
 										<img src="./image/showcart.png" alt="" class="cart">
 									</button>
-								</form>
-							</div></li>
+									</form>
+								</div>
+									
+							</div>
+						</a>
 					<%
 						}
 					%>
@@ -192,20 +197,24 @@
 						for (int i = 0; i < 11; i++) {
 							ProductDTO dto = list.get(23 + i);
 					%>
-						<li class="product"><img class="imgg"
-							src="<%=dto.getMainimg()%>" />
-							<div class="c-infor">
-								<span class="goods-brand"><b><%=dto.getCategory()%></b></span>
+												<a href="dailyInfo.jsp?num=<%=dto.getNum() %>" class="recom-part">
+							<img src="<%=dto.getMainimg()%>" alt="" class="recom-goods-img">
+							<div class="goods-info">
+								<span class="goods-brand"><%=dto.getCategory()%></span>
 								<span class="goods-name"><%=dto.getName()%></span>
-								<div class="price-cost"></div>
-								<span class="goods-price"><b><%=dto.getPrice()%></b>원</span>
-								<div class="goods-delfree">무료배송</div>
-								<form action="dailyProc.jsp" name="num" value="<%=dto.getNum()%>">
-									<button class="add-cart">
+								<span class="goods-price"><%=dto.getPrice()%>원</span>
+								<div class="goods-wrap-item">	
+									<div class="goods-delfree">무료배송</div>
+									<form action="dailyProc.jsp" >
+										<button class="add-cart" style="cursor: pointer"onclick="functtion(e)"  name="num" value="<%=dto.getNum()%>">
+											<input type="hidden" name="user_id" value="<%= (String) session.getAttribute("id")%>"> 
 										<img src="./image/showcart.png" alt="" class="cart">
 									</button>
-								</form>
-							</div></li>
+									</form>
+								</div>
+									
+							</div>
+						</a>
 
 
 					<%
