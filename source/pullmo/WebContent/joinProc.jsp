@@ -19,7 +19,6 @@
 <%
 
 	UserDAO dao = new UserDAO();
-
 	dao.Userinsert(userbean);
 %>	
 
@@ -36,5 +35,5 @@
 
 
 <%
-	response.sendRedirect("intro.jsp");
+	response.sendRedirect("daily.jsp");
 %>
