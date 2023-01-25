@@ -59,7 +59,7 @@
 	
 	.info_item .price{
 		color:#333;
-		font-size:28px;
+		font-size:25px;
 		text-align:right;
 		font-weight:bold;
 		padding:40px 0;
@@ -84,7 +84,7 @@
 		margin-right:20px;
 	}
 	
-	.btn_item li a{
+	.btn_item li a, input{
 		border-radius: 20px 0;
 	    font-size: 18px;
 	    font-weight: 400;
@@ -101,10 +101,13 @@
 	    background: #333;
 	    color: #fff;
 	}
-	.btn_item li:nth-child(2) a{
+	.btn_item li:nth-child(2) input{
 		border-color: #7acc12;
    		background: #7acc12;
    		color:#fff;
+   		outline:none;
+   		border:none;
+ 
 
 	}
 	
@@ -113,6 +116,7 @@
 		padding:40px 0;
 		justify-content:flex-end;
 	}
+	
 	.select p{
 		width:70px;
 		height:35px;
@@ -125,9 +129,11 @@
 	
 	
 	.total{
-		 padding: 40px 0;
-		 display: flex;
-		 justify-content: flex-end;
+		    color: #333;
+		    font-size: 28px;
+		    text-align: right;
+		    font-weight: bold;
+		    padding-bottom: 40px;
 	}
 	    
    
@@ -148,10 +154,10 @@
 					<h2><%=pdto.getName() %></h2>
 					<p class="info"><%=pdto.getInfo() %></p>
 					<p class="price"><%=pdto.getPrice() %> <span>원</span></p>
-					<form>
+					<form action="dailyInfoProc.jsp" method="post">
 						<div class="select">
 							<p>수량</p>
-							<select name="priceNum">
+							<select name="priceNum" id="priceNum" onchange="aa()">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -159,12 +165,13 @@
 								<option value="5">5</option>
 							</select>
 						</div>
-						<p class="total">총 금액 : <%= pdto.getPrice() * 2%></p>
+						<p class="total">총 금액은 : <%= pdto.getPrice()%></p>
 						<ul class="btn_item">
 							<li><a onclick="history.go(-1)">뒤로가기</a></li>
-							<li><a href="dailyinfoCart.jsp">장바구니</a></li>
+							<li><input type="submit" value="장바구니"></li>
 						</ul>
-						<input type="hidden" value="<%=pdto.getNum() %>">
+						<input type="hidden" value="<%=id %>" name="id">
+						<input type="hidden" value="<%=pdto.getNum() %>" name="num">
 					</form>
 
 				</div>
@@ -173,5 +180,23 @@
 	</div>
 	<%@ include file="TopBtn.jsp"%>
 	<%@include file="footer.jsp"%>
+	
+	<script>
+	var pricenum = 1;
+	var priceNum = document.querySelector('#priceNum');
+	var totalElem = document.querySelector('.total'); 
+	
+	function aa(){
+		var priceNumValue = priceNum.value;
+		pricenum = Number(priceNumValue);
+		
+		totalElem.innerHTML = "총 금액은 : " + pricenum * <%=pdto.getPrice() %>
+		
+	}
+	
+		
+		
+		
+	</script>
 </body>
 </html>
