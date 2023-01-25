@@ -2,6 +2,7 @@ package com;
 
 public class CartDTO {
 	private int num;
+	private int pricenum;
 	private String user_id;
 	private String category;
 	private String name;
@@ -13,14 +14,17 @@ public class CartDTO {
 	
 	public CartDTO() {}
 	
-	public CartDTO(int num, String user_id) {
+	public CartDTO(int num, int pricenum, String user_id) {
 		this.num = num;
+		this.pricenum = pricenum;
 		this.user_id = user_id;
 	}
 
-	public CartDTO(int num, String user_id, String category, String name, String info, int price, String mainimg,
-			String subimg) {
+	public CartDTO(int num, int pricenum, String user_id, String category, String name, String info, int price,
+			String mainimg, String subimg) {
+		super();
 		this.num = num;
+		this.pricenum = pricenum;
 		this.user_id = user_id;
 		this.category = category;
 		this.name = name;
@@ -36,6 +40,14 @@ public class CartDTO {
 
 	public void setNum(int num) {
 		this.num = num;
+	}
+
+	public int getPricenum() {
+		return pricenum;
+	}
+
+	public void setPricenum(int pricenum) {
+		this.pricenum = pricenum;
 	}
 
 	public String getUser_id() {
@@ -93,12 +105,9 @@ public class CartDTO {
 	public void setSubimg(String subimg) {
 		this.subimg = subimg;
 	}
-
-	@Override
-	public String toString() {
-		return "CartDTO [num=" + num + ", user_id=" + user_id + ", category=" + category + ", name=" + name + ", info="
-				+ info + ", price=" + price + ", mainimg=" + mainimg + ", subimg=" + subimg + "]";
-	}
+	
+	
+	
 	
 	
 	

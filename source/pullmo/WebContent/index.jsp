@@ -71,7 +71,7 @@
 						
 						<%	} else { %>
 						
-							<div class="user_btn"
+							<div class="user_btn">
 								<a href="myinfo.jsp">내정보 <i class="fa-solid fa-circle-user"></i></a>
 								<a href="indexProc.jsp?logout=1">로그아웃 <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
 							</div>

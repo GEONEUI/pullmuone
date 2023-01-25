@@ -20,7 +20,7 @@
 <body>
 	<%@ include file="header.jsp"%>
 			<table border="1" style="margin:0 auto">
-			<form action="dailyinfoCart.jsp" method="post">
+			<form action="dailyInfoProc.jsp" method="post">
 			<tr height="35">
 				<td rowspan="4"><img src="<%=pdto.getMainimg() %>"></td>
 				<td>상품이름 </td>
