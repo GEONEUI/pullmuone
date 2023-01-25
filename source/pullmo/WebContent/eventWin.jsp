@@ -8,7 +8,7 @@
 	<div class="contents-area">
 		<div class="inner">
 			<div class="location">
-				<a href="./index.jsp">홈</a> > <a href="./event.">이벤트</a>
+				<a href="./index.jsp">홈</a> > <a href="./event.jsp">이벤트</a>
 			</div>
 			<div class="cont-event-area">
 				<div class="title-tab-area">
