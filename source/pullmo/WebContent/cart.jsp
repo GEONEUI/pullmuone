@@ -45,6 +45,7 @@
 								<img src="<%=dto.getMainimg()%>" alt="" class="recom_goods_img">
 								<div class="goods-info">
 									<span class="goods-brand"><b><%=dto.getCategory()%></b></span>
+									<span class="goods-brand"><b>수량: <%=dto.getPricenum()%></b></span>
 									<span class="goods-name"><%=dto.getName()%></span>
 									<div class="price-cost"></div>
 									<span class="goods-price"><b><%=dto.getPrice()%></b>원</span>
@@ -70,24 +71,26 @@
 					target="_blank"><img src="./image/cart-bottum.png" alt="">
 			</div>
 			<%
+								int sum= 0;
 								for (int i = 0; i < list.size(); i++) {
 									CartDTO dto = list.get(i);
+									  sum += dto.getPrice();
 							%>
 
 			<div class="checkout-area">
 				<dl>
 					<dt class="list-head">
-						<em class="count">선택한 상품 <span data-count-view="item">1</span>개
+						<em class="count">선택한 상품 <span data-count-view="item"><%=list.size() %></span>개
 						</em>
 					</dt>
 					<d> <span>상품 판매가 </span> <b>
 						<div class="now-price">
-							<b data-price-view="origin" class="ppp">19,000</b> <span>원</span>
+							<b data-price-view="origin" class="ppp"><%=dto.getPricenum() %></b> <span>원</span>
 						</div>
 					</b> </d>
 					<d> <span>상품 할인 판매가</span> <b>
 						<div class="now-price">
-							<b data-price-view="sale" class="ppp">19,000</b> <span>원</span>
+							<b data-price-view="sale" class="ppp">0</b> <span>원</span>
 						</div>
 					</b> </d>
 					<d> <span>배송비</span> <b>
@@ -97,7 +100,7 @@
 					</b> </d>
 					<d class="checkout-sum"> <span>주문금액</span> <b>
 						<div class="now-price">
-							<b data-price-view="total">19,000</b> <span>원</span>
+							<b data-price-view="total"><%=sum %></b> <span>원</span>
 							<%
 								}
 							%>
