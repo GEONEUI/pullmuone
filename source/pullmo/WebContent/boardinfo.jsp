@@ -6,26 +6,7 @@
 <%@page import="com.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
- <%
- 	//넘어온 번호
- 	int num = Integer.parseInt(request.getParameter("num"));
- 	UserDAO dao = new UserDAO();
- 	BoardDAO bdao = new BoardDAO();
- 	BoardDTO bdto = bdao.boardSelectOne(num);
- 	
- 	BoardPlusDAO pdao = new BoardPlusDAO();
- 	Vector<BoardPlusDTO> pdto = pdao.selectOnePlus(num);
- 	
- 	
 
- 	
-
- 	String id = (String) session.getAttribute("id");
- 	String password = dao.getPass(id);
- 	
-
- %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -69,16 +50,19 @@
 				.line input[type="text"]{width:90%; height:50px;}
 				.line input[type="submit"]{}
 				
-				
-
-				
+			
 				.ad{font-size:18px;}
-				.ad .num{padding:15px 0;}
+				.ad .adtop{display:flex; justify-content:space-between;}
+				.ad .adtop .num{padding:15px 0;}
+				.ad .adtop .crud{}
+				.ad .adtop .crud button{
+					padding:5px;
+					cursor:pointer;
+				}
 				.ad .subject{padding-bottom:10px; font-weight:bold; font-size:25px;}
 				.ad ul{display:flex; font-size:17px; color:#555; padding-bottom:50px;}
 				.ad ul li{margin-right:10px;}
 				.ad .context{font-size:26px;}
-
 				
 				.reple .reple_item{border-bottom:1px solid #e5e5e5; padding:25px; background: #f7f7f7;}
 				
@@ -86,29 +70,59 @@
 				.reple ul li{margin-right: 8px; color:#555; font-size:16px}
 				.reple ul li:last-child{color:#b3b3b3; font-size:14px; padding-top:3px;}
 				
-				
-				
-
 			</style>
 </head>
 <body>
-				<%@ include file="header.jsp" %>
+		<%@ include file="header.jsp" %>
+						
+		<%
+		 	
+		 	String id = (String) session.getAttribute("id");
+			//넘어온 번호
+			int num = Integer.parseInt(request.getParameter("num"));
+			
+			if(id == null){%>
+					
+					<script>
+						alert('로그인하세요.');
+						history.go(-1);
+					</script>
+		<%
+			}
+		%>
 		
+		
+		<%
+			
+			UserDAO dao = new UserDAO();
+			BoardDAO bdao = new BoardDAO();
+			BoardDTO bdto = bdao.boardSelectOne(num);
+			
+		 	BoardPlusDAO pdao = new BoardPlusDAO();
+		 	Vector<BoardPlusDTO> pdto = pdao.selectOnePlus(num);
+		 	String password = dao.getPass(id); 	
+		 	
+	
+		%>
+ 
 					<div class="sec_table">
 						<div class="inner">
 							<div class="table">
 								<h2><%=bdto.getSubject() %></h2>
 								<div class="ad">
-									<p class="num">글번호 : <%=bdto.getNum() %></p>
+									<div class="adtop">
+										<p class="num">글번호 : <%=bdto.getNum() %></p>
+										<div class="crud">
+											<button onclick="CheckUpdate()">수정하기</button>
+											<button onclick="CheckDelete()">삭제하기</button>
+											<button onclick="history()">목록보기</button>
+										</div>
+									</div>
 									<ul>
 										<li>작성자 : <%=bdto.getWriter() %></li>
 										<li>작성날짜 : <%=bdto.getReg_date() %></li>
 									</ul>
-									<p class="context"><%=bdto.getContext()%></p>
-<<<<<<< HEAD
-=======
-									
->>>>>>> d6f900e1b459a02ec7d475b54a26df0fc6c074eb
+									<pre class="context"><%=bdto.getContext()%></pre>
 								</div>
 							</div>
 							<div class="reple">
@@ -153,5 +167,36 @@
 
 
 			<%@ include file="footer.jsp" %>
+			
+			<script>
+			
+				var userId = "<%=id%>";
+				var writeID = "<%=bdto.getWriter() %>";
+				var link = "<%=bdto.getNum() %>";
+				
+			
+				function CheckDelete(){
+					if(userId == writeID){
+						location.href="boardRemove.jsp?num=" + link;
+					}else{
+						alert("본인게시글만 삭제 가능합니다.");
+					}
+				}
+				
+				function CheckUpdate(){
+					if(userId == writeID){
+						location.href="boardUpdateForm.jsp?num=" + link;
+					}else{
+						alert("본인게시글만 수정 가능합니다.");
+					}
+				}
+				
+				function history(){
+					location.href="boardList.jsp";	
+				}
+				
+				
+				
+			</script>
 	</body>
 </html>

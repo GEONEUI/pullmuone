@@ -22,9 +22,7 @@ public class ProductDAO {
 	public void getConnet() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			System.out.println("드라이브로드");
 			conn = DriverManager.getConnection(url, id, pw);
-			System.out.println("디비연결");
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -45,7 +43,9 @@ public class ProductDAO {
 			// TODO: handle exception
 		}
 	}
-	//모든회원조회
+	
+	
+		//모든상품가져오기
 		public Vector<ProductDTO> selectAll() {
 			Vector<ProductDTO> list = new Vector<>();
 			try {
@@ -76,6 +76,38 @@ public class ProductDAO {
 			}
 			return list;
 		}
+	
+		
+		
+		//선택한 하나의 상품정보만 가져오기
+	public ProductDTO productSelectOne(int num) {
+		ProductDTO pdto = new ProductDTO();
+		getConnet();
+		
+		try {
+			//쿼리문작성
+			String sql = "select * from product where num = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				pdto.setNum(rs.getInt(1));
+				pdto.setCategory(rs.getString(2));
+				pdto.setName(rs.getString(3));
+				pdto.setInfo(rs.getString(4));
+				pdto.setPrice(rs.getInt(5));
+				pdto.setMainimg(rs.getString(6));
+				pdto.setSubimg(rs.getString(7));
+			}
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+	
+		return pdto;
+	}
 	
 	public static void main(String [] args) {
 		ProductDAO a = new ProductDAO();

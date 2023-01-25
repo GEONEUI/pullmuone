@@ -72,12 +72,9 @@
 		}
 
 		.goods-info {
-
-			width: 268px;
-			height: 180px;
 			background: #f7f7f7;
-			border-bottom-left-radius: 15px;
-			border-bottom-right-radius: 15px;
+			border-radius: 0 0 15px 15px;
+			padding: 20px;
 
 		}
 
@@ -93,11 +90,9 @@
 			display: block;
 		}
 
-		.goods-price {
-			width: 236px;
-			height: 28px;
-			display: block;
-			margin-left: 15px;
+		.goods-wrap-item{
+			display:flex;
+			justify-content:space-between;
 		}
 
 		.price-cost {
@@ -109,6 +104,7 @@
 		.recom-part {
 			width: 268px;
 			height: 448px;
+			margin-bottom: 15px;
 
 		}
 
@@ -116,9 +112,6 @@
 			width: 69px;
 			height: 26px;
 			background: #f7f7f7;
-			display: inline;
-			margin-left: 15px;
-
 		}
 
 		.add-cart {
@@ -127,8 +120,11 @@
 			border-radius: 30px;
 			border: #80c342;
 			background: #80c342;
-			float: right;
-			margin-right: 15px;
+			
+		}
+		.goods-wrap{
+		display:flex;
+		justify-content: space-between;
 		}
 
 		.cart {
@@ -137,8 +133,6 @@
 		}
 
 		.tabs {
-			width: 1903px;
-			height: 73px;
 			background: #f7f7f7;
 			justify-content: center;
 			display: flex;
@@ -181,11 +175,14 @@
 			width: 1200px;
 			display: flex;
 			flex-wrap: wrap;
+		    z-index: 1;
+		    display: flex;
+		    justify-content: space-between;
 
 		}
 
 		.product {
-			width: 208px;
+			width: 25%;
 			height: 390px;
 			margin: 16px;
 		}
@@ -215,12 +212,4 @@
 
 		.daily-banner{
 			width: 1200px;
-		}
-		.goods-brand,
-		.goods-name,
-		.price-cost {
-			margin-left: 10px;
-		}
-		.goods-brand{
-			margin-top: 5px;
 		}
