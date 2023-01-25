@@ -10,9 +10,9 @@ import jdk.internal.dynalink.support.TypeUtilities;
 
 public class CartDAO {
 	
-	String id = "java";
+	String id = "root";
 	String pw = "mysql";
-	String url = "jdbc:mysql://localhost:3306/pulmoo";
+	String url = "jdbc:mysql://localhost:3306/fullmo";
 	
 	Connection conn;
 	PreparedStatement pstmt;
@@ -80,25 +80,26 @@ public class CartDAO {
 		return list;
 	}	
 
-	
-	public CartDTO selecttwo(String id) {
-		CartDTO dto = new CartDTO();
-		try {
-			getConnet();
-			//쿼리문 작성
-			String sql = "select * from cart where user_id = ?";
-			pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, id);
-			rs = pstmt.executeQuery();
-			if(rs.next()) {
-				dto.setNum(rs.getInt(1));
-				dto.setUser_id(rs.getString(2));
-			}
-			conn.close();
-		} catch (Exception e) {}
+	//선택한 아이디가 가지고있는 최종정보를 삽입
+	public void cartInsert() {
 		
-		return dto;
+		getConnet();
+		try {
+			//쿼리문 작성
+			String sql = "insert into cart values (?, ?, ?)";
+			pstmt = conn.prepareStatement(sql);
+			//pstmt.setInt(1, x);
+			//pstmt.setInt(2, x);
+			//pstmt.setString(3, x);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		
+		
+		
 	}
+	
 	
 		
 	public static void main(String [] args) {

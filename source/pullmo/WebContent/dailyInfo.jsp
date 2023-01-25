@@ -5,10 +5,17 @@
 	pageEncoding="UTF-8"%>
 
 <%
+	String id = (String)session.getAttribute("id");
+	if(id == null){
+		id = "손님";
+	}
+	
 	int num = Integer.parseInt(request.getParameter("num"));
 	
 	ProductDAO pdao = new ProductDAO();
 	ProductDTO pdto = pdao.productSelectOne(num);
+	
+	
 
 
 %>
@@ -48,8 +55,9 @@
 			</tr>
 			<tr height="35">
 				<td colspan="3" align="center">
-					<input type="submit" value="장바구니 담기">
-					<input type="hidden" value="<%=num %>" name="num"></form>
+					<input type="hidden" value="<%=num %>" name="num">
+					<input type="hidden" value="<%=id %>" name="user_id">
+					<input type="submit" value="장바구니 담기"></form>
 					<button onclick="location.href='daily.jsp'">뒤로가기</button>
 				</td>
 			</tr>
