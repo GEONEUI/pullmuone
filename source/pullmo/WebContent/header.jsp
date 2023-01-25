@@ -5,6 +5,10 @@
 <style>
 	
 	/* header */
+	#header{
+		border-bottom:1px solid #ebebeb;
+	}
+	
 	.header{
 		display:flex;
 		justify-content:space-between;
@@ -44,8 +48,6 @@
 		font-weight: bold;
 	}
 
-	.header	
-	
 	
 	.serarch{
 	
