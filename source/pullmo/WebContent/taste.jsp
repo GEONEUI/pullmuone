@@ -27,9 +27,9 @@
 
 
 	<div class="location">
-         <a href="./index.php">홈</a>
+         <a href="./index.jsp">홈</a>
          >
-         <a href="./event.php">시음선물</a>
+         <a href="./taste.jsp">시음선물</a>
 	</div>
 	<div class="del">
 		<div class="inner">
