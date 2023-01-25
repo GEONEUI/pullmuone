@@ -7,7 +7,7 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String id=(String) session.getAttribute("id");
-	System.out.println(id+"asdasd");
+	System.out.println(id);
 	ProductDAO pdao = new ProductDAO();
 	Vector<ProductDTO> list = pdao.selectAll();
 %>
