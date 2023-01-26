@@ -10,7 +10,7 @@ import jdk.internal.dynalink.support.TypeUtilities;
 
 public class ProductDAO {
 	
-	String id = "java";
+	String id = "root";
 	String pw = "mysql";
 	String url = "jdbc:mysql://localhost:3306/fullmo";
 	

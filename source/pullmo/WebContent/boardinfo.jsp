@@ -84,7 +84,7 @@
 			if(id == null){%>
 					
 					<script>
-						alert('로그인하세요.');
+						alert('로그인이 필요한 서비스입니다.');
 						history.go(-1);
 					</script>
 		<%

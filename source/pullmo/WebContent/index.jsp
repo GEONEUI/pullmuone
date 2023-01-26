@@ -61,7 +61,7 @@
 						</h2>
 						<%
 							if(id.equals("admin")){%>
-							<a href="admin.jsp">관리자페이지<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
+							<a href="admin.jsp">관리자<i class="fa-sharp fa-solid fa-arrow-right"></i></a>
 							<a href="indexProc.jsp?logout=1">로그아웃 <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
 							
 							<% } else if(id.equals("로그인")){ %>
@@ -81,21 +81,17 @@
 					</div>
 					<ul class="icon_service">
 						<li>
-							<a href="">
+							<a href="dailyinfoCart.jsp">
 								<p class="icon"><i class="fa-regular fa-message-smile"></i></p>
-								<p>음용내역보기</p>
+								<p>장바구니</p>
 							</a>
-							<a href="">
+							<a href="event.jsp">
 								<p class="icon"><i class="fa-regular fa-message-smile"></i></p>
-								<p>음용내역보기</p>
+								<p>이벤트</p>
 							</a>
-							<a href="">
+							<a href="boardList.jsp">
 								<p class="icon"><i class="fa-regular fa-message-smile"></i></p>
-								<p>음용내역보기</p>
-							</a>
-							<a href="">
-								<p class="icon"><i class="fa-regular fa-message-smile"></i></p>
-								<p>음용내역보기</p>
+								<p>공지사항</p>
 							</a>
 						</li>
 					</ul>

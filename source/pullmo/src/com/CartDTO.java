@@ -2,7 +2,7 @@ package com;
 
 public class CartDTO {
 	private int num;
-	private int pricenum;
+	private int priceNum;
 	private String user_id;
 	private String category;
 	private String name;
@@ -14,17 +14,17 @@ public class CartDTO {
 	
 	public CartDTO() {}
 	
-	public CartDTO(int num, int pricenum, String user_id) {
+	public CartDTO(int num, int priceNum, String user_id) {
 		this.num = num;
-		this.pricenum = pricenum;
+		this.priceNum = priceNum;
 		this.user_id = user_id;
 	}
 
-	public CartDTO(int num, int pricenum, String user_id, String category, String name, String info, int price,
+	public CartDTO(int num, int priceNum, String user_id, String category, String name, String info, int price,
 			String mainimg, String subimg) {
 		super();
 		this.num = num;
-		this.pricenum = pricenum;
+		this.priceNum = priceNum;
 		this.user_id = user_id;
 		this.category = category;
 		this.name = name;
@@ -43,11 +43,11 @@ public class CartDTO {
 	}
 
 	public int getPricenum() {
-		return pricenum;
+		return priceNum;
 	}
 
 	public void setPricenum(int pricenum) {
-		this.pricenum = pricenum;
+		this.priceNum = pricenum;
 	}
 
 	public String getUser_id() {

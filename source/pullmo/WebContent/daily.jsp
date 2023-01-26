@@ -23,13 +23,7 @@
 		<div class="inner">
 			<div class="daily-banner">
 
-				<div id="available">
-					<div id="av1">
-						<div id="tip">TIP</div>
-						<p>일일배송 가능 여부를 확인해보세요.</p>
-					</div>
-					<a href="https://shop.pulmuone.co.kr/shippingGuide?target=daily"
-						target="_blank" id="del-define"> 배송유형 확인하기 </a>
+				
 				</div>
 				<div id="recom">
 					<h3 id="recom-logo">매일매일,먹어봐요</h3>
@@ -97,7 +91,7 @@
 									name="priceN"><span>높은가격</span></label> <label for=""><input
 									type="radio" value="low-price" name="priceN"><span>낮은가격</span></label>
 							</div>
-c
+
 						</div>
 					</div>
 					<ul class="product-list">
