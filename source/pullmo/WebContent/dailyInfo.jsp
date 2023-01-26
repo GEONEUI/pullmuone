@@ -170,7 +170,7 @@
 							<li><a onclick="history.go(-1)">뒤로가기</a></li>
 							<li><input type="submit" value="장바구니"></li>
 						</ul>
-						<input type="hidden" value="<%=id %>" name="id">
+						<input type="hidden" value="<%=id %>" name="user_id">
 						<input type="hidden" value="<%=pdto.getNum() %>" name="num">
 					</form>
 

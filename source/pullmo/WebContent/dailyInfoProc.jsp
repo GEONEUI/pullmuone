@@ -11,33 +11,46 @@
 <body>
 
 
-
-
 <%
 
+	request.setCharacterEncoding("UTF-8");
 	String id = request.getParameter("user_id");
 
-	if(id.equals("손님")){%>
+	if(id.equals("손님")) {%>
 			<script>
 				alert('회원가입후 장바구니를 이용해주세요.');
 				history.go(-1);
 			</script>
 		
-	<%		
+			
+	<%	} else { 
+
+	
+		int priceNum = Integer.parseInt(request.getParameter("priceNum"));
+		int num = Integer.parseInt(request.getParameter("num"));
+		
+		
+		CartDAO cdao = new CartDAO();
+		cdao.cartInsert(num,priceNum,id);
+		
+		
+		%>
+			<script>
+				location.href="dailyinfoCart.jsp";
+			</script>
+			
+	<%
 		}
 
 	%>
+
+
 	
 	
 	
-<%
-	int priceNum = Integer.parseInt(request.getParameter("priceNum"));
-	int num = Integer.parseInt(request.getParameter("num"));
-	
-	
-	CartDAO cdao = new CartDAO();
-	cdao.cartInsert(num,priceNum,id);
-%>
+
+
+
 
 
 </body>

@@ -10,9 +10,9 @@ import jdk.internal.dynalink.support.TypeUtilities;
 
 public class CartDAO {
 	
-	String id = "java";
+	String id = "root";
 	String pw = "mysql";
-	String url = "jdbc:mysql://localhost:3306/pulmoo";
+	String url = "jdbc:mysql://localhost:3306/fullmo";
 	
 	Connection conn;
 	PreparedStatement pstmt;
@@ -53,30 +53,29 @@ public class CartDAO {
 		try {
 			getConnet();
 			//쿼리문 작성
-			String sql = "select A.num, A.priceNum, A.user_id, B.category,  B.name,  B.info,  B.price,  B.mainimg, B.subimg\r\n" + 
-					"					from cart A\r\n" + 
-					"				left outer join product B\r\n" + 
-					"					on B.num = A.num\r\n" + 
-					"					where user_id = ? ;";
+			String sql = "select * from product natural join cart where user_id = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, id);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				CartDTO dto = new CartDTO();
 				dto.setNum(rs.getInt(1));
-				dto.setPricenum(rs.getInt(2));
-				dto.setUser_id(rs.getString(3));
-				dto.setCategory(rs.getString(4));
-				dto.setName(rs.getString(5));
-				dto.setInfo(rs.getString(6));
-				dto.setPrice(rs.getInt(7));
-				dto.setMainimg(rs.getString(8));
-				dto.setSubimg(rs.getString(9));
-				
+				dto.setCategory(rs.getString(2));
+				dto.setName(rs.getString(3));
+				dto.setInfo(rs.getString(4));
+				dto.setPrice(rs.getInt(5));
+				dto.setMainimg(rs.getString(6));
+				dto.setSubimg(rs.getString(7));
+				dto.setPricenum(rs.getInt(8));
+				dto.setUser_id(rs.getString(9));
+			
 				list.add(dto);
 			}
 			conn.close();
-		} catch (Exception e) {}
+			System.out.println(list);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		return list;
 	}	
 

@@ -99,12 +99,10 @@
 						<li><a href="product.jsp">택배배송</a></li>
 						<li><a href="taste.jsp">시음선물</a></li>
 						<li><a href="event.jsp">이벤트</a></li>
-						<li><a href="boardList.jsp">커뮤니티</a></li>
 					</ul>
 				</div>
 			</div>
-			<div class="serarch">
-					
+			<div class="serarch" style="text-align:right">
 					<form class="search-area" action="/product/search">
 						<input type="text" id="input" name="searchKeyword" value="" title="검색어 입력">
 						<button id="search-button">
