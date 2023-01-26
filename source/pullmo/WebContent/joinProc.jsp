@@ -35,5 +35,5 @@
 
 
 <%
-	response.sendRedirect("daily.jsp");
+	response.sendRedirect("index.jsp");
 %>
