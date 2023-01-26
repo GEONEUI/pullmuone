@@ -10,7 +10,6 @@
 </head>
 <body>
 
-
 <%
 
 	request.setCharacterEncoding("UTF-8");
@@ -43,15 +42,6 @@
 		}
 
 	%>
-
-
-	
-	
-	
-
-
-
-
 
 </body>
 </html>

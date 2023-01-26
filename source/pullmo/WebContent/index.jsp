@@ -18,9 +18,7 @@
 
 <body>
 	<%@ include file = "header.jsp" %>
-	
-	
-	
+
 	<div class="visual" to="/test">
 		<!-- Swiper -->
 		<div class="swiper mySwiper">
