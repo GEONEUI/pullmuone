@@ -10,8 +10,6 @@
 	if(id == null){
 		id = "로그인";
 	}
-	
-
 %>
 
 <!doctype html>
