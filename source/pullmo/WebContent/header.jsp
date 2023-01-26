@@ -1,7 +1,12 @@
+<%@page import="com.ProductDTO"%>
+<%@page import="java.util.Vector"%>
+<%@page import="com.ProductDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
+<%
+	
+%>
 <style>
 	
 	/* header */
@@ -103,7 +108,7 @@
 				</div>
 			</div>
 			<div class="serarch" style="text-align:right">
-					<form class="search-area" action="/product/search">
+					<form class="search-area" action="./dailysearch.jsp">
 						<input type="text" id="input" name="searchKeyword" value="" title="검색어 입력">
 						<button id="search-button">
 							<img src="./image/daily-search.png" alt="" id="search">
