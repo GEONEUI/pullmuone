@@ -77,7 +77,7 @@
 					</div>
 					<ul class="icon_service">
 						<li>
-							<a href="dailyinfoCart.jsp">
+							<a href="dailyinfoCartProc.jsp">
 								<p class="icon"><i class="fa-sharp fa-solid fa-cart-shopping" style="color:#333; font-weight: normal";></i></p>
 								<p>장바구니</p>
 							</a>
