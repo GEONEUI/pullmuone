@@ -10,13 +10,9 @@
 	System.out.println(id);
 	ProductDAO pdao = new ProductDAO();
 	Vector<ProductDTO> list = pdao.selectAll();
-	
-	
 %>
-
 <!DOCTYPE>
 <html>
-
 <%@ include file="front_header.jsp"%>
 <body>
 	<%@ include file="header.jsp"%>
@@ -24,8 +20,6 @@
 		<img src="./image/dailymain.png" alt="" id="mainImg1">
 		<div class="inner">
 			<div class="daily-banner">
-
-				
 				</div>
 				<div id="recom">
 					<h3 id="recom-logo">매일매일,먹어봐요</h3>
@@ -49,13 +43,11 @@
 									</button>
 									</form>
 								</div>
-									
 							</div>
 						</a>
 						<%
 							}
 						%>
-						
 					</div>
 				</div>
 		</div>
@@ -79,8 +71,6 @@
 		<div class="inner">
 			<div class="contents">
 				<nav class="nav-daily-shipping">
-
-
 				<div id="tab1" class="tab_content">
 					<div class="result-header">
 
@@ -93,7 +83,6 @@
 									name="priceN"><span>높은가격</span></label> <label for=""><input
 									type="radio" value="low-price" name="priceN"><span>낮은가격</span></label>
 							</div>
-
 						</div>
 					</div>
 					<ul class="product-list">
@@ -209,7 +198,6 @@
 									
 							</div>
 						</a>
-
 
 					<%
 						}

@@ -10,8 +10,6 @@
 	if(id == null){
 		id = "로그인";
 	}
-	
-
 %>
 
 <!doctype html>
@@ -20,9 +18,7 @@
 
 <body>
 	<%@ include file = "header.jsp" %>
-	
-	
-	
+
 	<div class="visual" to="/test">
 		<!-- Swiper -->
 		<div class="swiper mySwiper">
@@ -81,16 +77,16 @@
 					</div>
 					<ul class="icon_service">
 						<li>
-							<a href="dailyinfoCartProc.jsp">
-								<p class="icon"><i class="fa-regular fa-message-smile"></i></p>
+							<a href="dailyinfoCart.jsp">
+								<p class="icon"><i class="fa-solisd fa-cart-shopping"  style="color:#333; font-weight: normal;"></i></p>
 								<p>장바구니</p>
 							</a>
 							<a href="event.jsp">
-								<p class="icon"><i class="fa-regular fa-message-smile"></i></p>
+								<p class="icon"><i class="fa-solid fa-gift"  style="color:#333; font-weight: normal;"></i></p>
 								<p>이벤트</p>
 							</a>
 							<a href="boardList.jsp">
-								<p class="icon"><i class="fa-regular fa-message-smile"></i></p>
+								<p class="icon"><i class="fa-solid fa-bullhorn"  style="color:#333; font-weight: normal;"></i></p>
 								<p>공지사항</p>
 							</a>
 						</li>

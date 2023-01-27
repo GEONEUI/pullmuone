@@ -6,12 +6,6 @@
 <%@page import="com.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-    
-
-
-
-
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -76,9 +70,6 @@
 				.reple ul li{margin-right: 8px; color:#555; font-size:16px}
 				.reple ul li:last-child{color:#b3b3b3; font-size:14px; padding-top:3px;}
 				
-				
-				
-
 			</style>
 </head>
 <body>

@@ -12,7 +12,6 @@ public class BoardDAO {
 	String pw = "xptmxm12!";
 	String url = "jdbc:mariadb://183.111.138.245:3306/dbrjsdml";
 
-		
 		Connection conn;
 		PreparedStatement pstmt;
 		ResultSet rs;	

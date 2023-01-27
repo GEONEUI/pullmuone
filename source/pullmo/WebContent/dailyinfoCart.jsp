@@ -6,14 +6,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-
 <%
 	String id = (String)session.getAttribute("id");
-
-	int sum = 0;
 	CartDAO cdao = new CartDAO();
 	Vector<CartDTO> v = cdao.selectOne(id);
-	
+	int sum = 0;
 	int result = 0;
 	
 %>
@@ -182,73 +179,6 @@
 			</div>
 		</div>
 	</div>
-<style>
-	.sec_modal {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		width: 100%;
-		height: 100%;
-		display:none;
-	}
-	
-	.sec_modal.active{
-		display:block;
-	}
-
-
-	.sec_modal::before {
-		width: 100%;
-		height: 100%;
-		background: #000;
-		position: absolute;
-		top: 0;
-		left: 0;
-		opacity: 90%;
-		content: "";
-	}
-
-
-	.modal {
-		width: 550px;
-		height: 550px;
-		background: #fff;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		display: flex;
-	    align-items: center;
-	    justify-content: center;
-	}
-	
-	.modal h2{
-		text-align:center;
-		margin-bottom:45px;
-		font-size:26px;
-	}
-
-
-	.item {
-		display: flex;
-		width: 100%;
-		justify-content: space-around;
-	}
-	
-	.item li a{
-		padding:20px;
-		font-size:18px;
-	}
-	
-	.button{
-		position:absolute;
-		top:5%;
-		right:5%;
-	}
-	
-	
 <style>
 	.sec_modal {
 		position: fixed;
@@ -461,7 +391,6 @@
 
 </script>
 
-	
 	<%@ include file="TopBtn.jsp"%>
 	<%@include file="footer.jsp"%>
 	

@@ -108,6 +108,40 @@ public class ProductDAO {
 		return pdto;
 	}
 	
+			public  Vector<ProductDTO> searchAll(String search) {
+				 Vector<ProductDTO> list = new Vector<>();
+				try {
+					getConnet();
+					//쿼리문 작성
+					String sql = "select * from product where name like ? or category like ? or info like ?";
+					pstmt = conn.prepareStatement(sql);
+					pstmt.setString(1, "%"+search+"%");
+					pstmt.setString(2, "%"+search+"%");
+					pstmt.setString(3, "%"+search+"%");
+					rs = pstmt.executeQuery();
+					while(rs.next()) {
+						ProductDTO dto = new ProductDTO();
+						dto.setNum(rs.getInt(1));
+						dto.setCategory(rs.getString(2));
+						dto.setName(rs.getString(3));
+						dto.setInfo(rs.getString(4));
+						dto.setPrice(rs.getInt(5));
+						dto.setMainimg(rs.getString(6));
+						dto.setSubimg(rs.getString(7));
+					
+						list.add(dto);
+					}
+					conn.close();
+					System.out.println(list);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				return list;
+			}
+	
+	
+	
+	
 	public static void main(String [] args) {
 		ProductDAO a = new ProductDAO();
 		Vector<ProductDTO> dd = a.selectAll();
