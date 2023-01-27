@@ -8,7 +8,7 @@ import java.util.Vector;
 
 public class BoardPlusDAO {
 
-	String id = "root";
+	String id = "dbrjsdml";
 	String pw = "xptmxm12!";
 	String url = "jdbc:mariadb://183.111.138.245:3306/dbrjsdml";
 
@@ -87,5 +87,6 @@ public class BoardPlusDAO {
 		
 		return v;
 	}
+	
 
 }

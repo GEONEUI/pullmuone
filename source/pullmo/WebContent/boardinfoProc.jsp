@@ -13,7 +13,10 @@
 	<jsp:setProperty property="*" name="plusbeen"/>
 </jsp:useBean>
 
-
+<%=plusbeen.getContext() %>
+<%=plusbeen.getNum() %>
+<%=plusbeen.getPassword() %>
+<%=plusbeen.getWriter() %>
 
 <%
 	String context = request.getParameter("context");
@@ -37,7 +40,9 @@
 
 
 <script>
-	location.href="boardinfo.jsp?num=<%=plusbeen.getRef() %>";
+location.href="boardinfo.jsp?num=<%=plusbeen.getRef() %>";
 </script>
+	
+
 </body>
 </html>

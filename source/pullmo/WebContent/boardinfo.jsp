@@ -62,7 +62,7 @@
 				.ad .subject{padding-bottom:10px; font-weight:bold; font-size:25px;}
 				.ad ul{display:flex; font-size:17px; color:#555; padding-bottom:50px;}
 				.ad ul li{margin-right:10px;}
-				.ad .context{font-size:26px;}
+				.ad .context{font-size:20px;}
 				
 				.reple .reple_item{border-bottom:1px solid #e5e5e5; padding:25px; background: #f7f7f7;}
 				

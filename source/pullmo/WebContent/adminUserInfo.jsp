@@ -97,7 +97,7 @@ table {
 			<div class="admin">
 				<h2>회원내용변경</h2>
 				<table border="1" width="650">
-					<form action="adminUserinfoProc.jsp" method="post">
+					<form action="adminUserinfoUpdate.jsp" method="post">
 						<tr height="35">
 							<td align="center">아이디</td>
 							<td align="center"><%=dto.getUser_id() %></td>
