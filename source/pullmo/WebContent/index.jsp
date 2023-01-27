@@ -78,7 +78,7 @@
 					<ul class="icon_service">
 						<li>
 							<a href="dailyinfoCart.jsp">
-								<p class="icon"><i class="fa-solisd fa-cart-shopping"  style="color:#333; font-weight: normal;"></i></p>
+								<p class="icon"><i class="fa-sharp fa-solid fa-cart-shopping" style="color:#333; font-weight: normal";></i></p>
 								<p>장바구니</p>
 							</a>
 							<a href="event.jsp">

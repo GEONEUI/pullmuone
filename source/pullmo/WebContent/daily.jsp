@@ -77,13 +77,6 @@
 						<div class="result-total">
 							총<span class="count">12</span>개
 						</div>
-						<div class="result-listType">
-							<div class="result-header-sort">
-								<label for=""><input type="radio" value="high-price"
-									name="priceN"><span>높은가격</span></label> <label for=""><input
-									type="radio" value="low-price" name="priceN"><span>낮은가격</span></label>
-							</div>
-						</div>
 					</div>
 					<ul class="product-list">
 					<%
