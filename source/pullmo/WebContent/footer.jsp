@@ -27,7 +27,7 @@
 	}
 
 	#footer{
-		padding: 0px 20px 148px;
+		padding: 20px 20px 40px 20px;
 		background: #f5f5f5;
 	}
 
@@ -71,16 +71,15 @@
 			padding-right: 15px;
 	}
 	.logo_copy_area .f_copy .copy_info li .f_title{
-		color: #999;
+		color: #666;
 		padding-right: 3px;
-		font-weight: bold;
 	}
 	.logo_copy_area .f_copy .copy_info li .f_body{
-		color: #333;
+		color: #222;
 	}
 
 	em{
-		color: #333333;
+	color: #222;
     font-size: 10px;
     display: block;
     text-transform: uppercase;
@@ -122,24 +121,24 @@
 					<img src="./image/f_logo.png" alt="">
 				</div>
 				<div class="f_copy">
-					<p>(주)풀무원녹즙</p>
+					<p>(주)풀무원녹즙클론</p>
 					<ul class="copy_info">
-						<li><span class="f_title">대표이사</span><span class="f_body">000</span></li>
-						<li><span class="f_title">대표전화</span><span class="f_body">000-0000-0000</span></li>
-						<li><span class="f_title">통신판매번호</span><span class="f_body">2016-충북증평-00045</span></li>
-						<li><span class="f_title">사업자등록번호</span><span class="f_body">301-81-98406</span></li>
+						<li><span class="f_title">대표이사</span><span class="f_body">유건의</span></li>
+						<li><span class="f_title">대표전화</span><span class="f_body">010-7121-8135</span></li>
+						<li><span class="f_title">통신판매번호</span><span class="f_body">이대중앙정보학원</span></li>
+						<li><span class="f_title">사업자등록번호</span><span class="f_body">930-010-7121</span></li>
 					</ul>
 					<ul class="copy_info">
-						<li><span class="f_title">호스팅제공자</span><span class="f_body">(주)풀무원녹즙</span></li>
+						<li><span class="f_title">호스팅제공자</span><span class="f_body">(주)풀무원녹즙클론</span></li>
 						<li><span class="f_title">CS이메일</span><span class="f_body">dbrjsdml@naver.com</span></li>
-						<li><span class="f_title">사업자 주소</span><span class="f_body">충청북도 증평군 도원면 원명로 35</span></li>
+						<li><span class="f_title">사업자 주소</span><span class="f_body">본사이트는 포트폴리오 사이트입니다.</span></li>
 					</ul>
 					<ul class="copy_info">
-						<li><span class="f_title">고객기쁨센터</span><span class="f_body">000-000-0000 (평일 09:00 ~ 18:00 점심시간 12:00 ~13:00 /토,일,공휴일 휴무)</span></li>
+						<li><span class="f_title">고객기쁨센터</span><span class="f_body">010-7121-8135 (평일 09:00 ~ 18:00 점심시간 12:00 ~13:00 /토,일,공휴일 휴무)</span></li>
 						<li><span class="f_title">CS이메일</span><span class="f_body">dbrjsdml@naver.com</span></li>
-						<li><span class="f_title">사업자 주소</span><span class="f_body">충청북도 증평군 도원면 원명로 35</span></li>
+						<li><span class="f_title">사업자 주소</span><span class="f_body">본사이트는 포트폴리오 사이트입니다.</span></li>
 					</ul>
-					<em>COPYRIGHT © PULMUONEGREEJUICE.CO,LTD. ALL.RIGHTS RESERVED</em>
+					<em>본사이트는 상업적목적이 아닌 포트폴리오로 제작된 사이트입니다.</em>
 				</div>
 			</div>
 			
