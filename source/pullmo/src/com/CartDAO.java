@@ -6,13 +6,14 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Vector;
 
+import javafx.fxml.Initializable;
 import jdk.internal.dynalink.support.TypeUtilities;
 
 public class CartDAO {
 	
-	String id = "root";
-	String pw = "mysql";
-	String url = "jdbc:mysql://localhost:3306/fullmo";
+	String id = "dbrjsdml";
+	String pw = "xptmxm12!";
+	String url = "jdbc:mariadb://183.111.138.245:3306/dbrjsdml";
 	
 	Connection conn;
 	PreparedStatement pstmt;
@@ -22,10 +23,8 @@ public class CartDAO {
 	//드라이버 연결
 	public void getConnet() {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			System.out.println("드라이브로드");
+			Class.forName("org.mariadb.jdbc.Driver");
 			conn = DriverManager.getConnection(url, id, pw);
-			System.out.println("디비연결");
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -96,6 +95,27 @@ public class CartDAO {
 			e.printStackTrace();
 		}
 					
+	}
+	
+	
+	//선택한 요소 하나만 지우기
+	public void cartDeleteOne(String id, int n1, int n2) {
+		getConnet();
+		try {
+			//쿼리문작성
+			String sql = "delete from cart where num = ? AND priceNum = ? AND user_id = ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, n1);
+			pstmt.setInt(2, n2);
+			pstmt.setString(3, id);
+			pstmt.executeUpdate();
+			
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
 	}
 	
 			

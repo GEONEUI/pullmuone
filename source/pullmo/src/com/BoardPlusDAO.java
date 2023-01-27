@@ -9,8 +9,8 @@ import java.util.Vector;
 public class BoardPlusDAO {
 
 	String id = "root";
-	String pw = "mysql";
-	String url = "jdbc:mysql://localhost:3306/fullmo";
+	String pw = "xptmxm12!";
+	String url = "jdbc:mariadb://183.111.138.245:3306/dbrjsdml";
 
 	Connection conn;
 	PreparedStatement pstmt;
@@ -19,7 +19,7 @@ public class BoardPlusDAO {
 	// 드라이버 연결
 	public void getConnet() {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("org.mariadb.jdbc.Driver");
 			System.out.println("드라이브로드");
 			conn = DriverManager.getConnection(url, id, pw);
 			System.out.println("디비연결");

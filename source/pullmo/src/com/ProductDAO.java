@@ -10,9 +10,9 @@ import jdk.internal.dynalink.support.TypeUtilities;
 
 public class ProductDAO {
 	
-	String id = "root";
-	String pw = "mysql";
-	String url = "jdbc:mysql://localhost:3306/fullmo";
+	String id = "dbrjsdml";
+	String pw = "xptmxm12!";
+	String url = "jdbc:mariadb://183.111.138.245:3306/dbrjsdml";
 	
 	Connection conn;
 	PreparedStatement pstmt;
@@ -21,7 +21,7 @@ public class ProductDAO {
 	//드라이버 연결
 	public void getConnet() {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("org.mariadb.jdbc.Driver");	
 			conn = DriverManager.getConnection(url, id, pw);
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -67,7 +67,6 @@ public class ProductDAO {
 					
 					list.add(dto);
 					
-					
 				}
 				
 				conn.close();
@@ -111,6 +110,9 @@ public class ProductDAO {
 	
 	public static void main(String [] args) {
 		ProductDAO a = new ProductDAO();
-		a.getConnet();
+		Vector<ProductDTO> dd = a.selectAll();
+		for(ProductDTO dto : dd) {
+			System.out.println(dto);
+		}
 	}
 }

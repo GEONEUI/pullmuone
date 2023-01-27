@@ -81,7 +81,7 @@
 					</div>
 					<ul class="icon_service">
 						<li>
-							<a href="dailyinfoCart.jsp">
+							<a href="dailyinfoCartProc.jsp">
 								<p class="icon"><i class="fa-regular fa-message-smile"></i></p>
 								<p>장바구니</p>
 							</a>

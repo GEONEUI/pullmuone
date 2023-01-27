@@ -1,26 +1,21 @@
-<%@page import="com.UserDAO"%>
+<%@page import="com.CartDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-  
-  
+    
+    
 <%
 	request.setCharacterEncoding("UTF-8");
 
+	String id = (String)session.getAttribute("id");
 	
+	int num = Integer.parseInt(request.getParameter("num"));
+	int priceNum = Integer.parseInt(request.getParameter("priceNum"));
+	
+	CartDAO cdao = new CartDAO();
+	cdao.cartDeleteOne(id, num, priceNum);
+	
+	response.sendRedirect("dailyinfoCart.jsp");
 %>
-
-
-<jsp:useBean id="userbean" class="com.UserDTO">
-	<jsp:setProperty property="*" name="userbean"/>>
-</jsp:useBean>
-
-
-
-<%
-
-	UserDAO dao = new UserDAO();
-	dao.Userinsert(userbean);
-%>	
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -29,11 +24,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+여기로 넘어오나요
 </body>
 </html>
-
-
-<%
-	response.sendRedirect("intro.jsp");
-%>
