@@ -6,11 +6,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-
 <%
 	String id = (String)session.getAttribute("id");
-
-
 	CartDAO cdao = new CartDAO();
 	Vector<CartDTO> v = cdao.selectOne(id);
 %>
@@ -57,8 +54,6 @@
 			%>
 		</table>
 	</div>
-	
-	
 	
 	<%@ include file="TopBtn.jsp"%>
 	<%@include file="footer.jsp"%>

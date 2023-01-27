@@ -10,8 +10,6 @@
 	if(id == null){
 		id = "로그인";
 	}
-	
-
 %>
 
 <!doctype html>
@@ -20,9 +18,7 @@
 
 <body>
 	<%@ include file = "header.jsp" %>
-	
-	
-	
+
 	<div class="visual" to="/test">
 		<!-- Swiper -->
 		<div class="swiper mySwiper">

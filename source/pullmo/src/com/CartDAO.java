@@ -6,8 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Vector;
 
-import jdk.internal.dynalink.support.TypeUtilities;
-
 public class CartDAO {
 	
 	String id = "java";

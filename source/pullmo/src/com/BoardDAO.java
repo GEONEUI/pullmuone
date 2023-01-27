@@ -12,7 +12,6 @@ public class BoardDAO {
 	String pw = "mysql";
 	String url = "jdbc:mysql://localhost:3306/pulmoo";
 
-		
 		Connection conn;
 		PreparedStatement pstmt;
 		ResultSet rs;	

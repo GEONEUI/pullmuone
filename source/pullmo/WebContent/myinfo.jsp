@@ -68,6 +68,7 @@
 		align-items:center;
 		font-size:18px;
 		letter-spacing: -1.5px;
+		overflow: hidden;
 	}
 	
 	.line .form_input input{
@@ -76,11 +77,12 @@
 	    white-space: nowrap;
 	    font-size: 16px;
 	    letter-spacing: -1.3px;
-	    height: 98%;
+	    height: 100%;
 	    font-weight: 400;
 	    color:#444;
 	    border:none;
  	    width: 100%;
+ 	    outline: none;
 	}
 	
 	.myinfoBtn{
