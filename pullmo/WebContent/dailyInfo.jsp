@@ -94,10 +94,14 @@
    		cursor:pointer;
 	}
 	
+	.btn_item li a{
+		 color: #fff !important;
+	}
+	
 	.btn_item li:nth-child(1) a{
 		border-color: #333;
 	    background: #333;
-	    color: #fff;
+	    color: #fff !important;
 	}
 	
 	.btn_item li:nth-child(2) input{

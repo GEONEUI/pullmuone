@@ -7,9 +7,9 @@
 <%
 	
 	String id = (String)session.getAttribute("id");
-	System.out.println(id);
+
 	if(id == null){
-		id = "1";
+		id = "";
 	};
 
 	BoardDAO bdao = new BoardDAO();
@@ -95,6 +95,10 @@
 					text-align:center;
 				}
 				
+				.cursor{
+					cursor:pointer;
+				}
+				
 
 
 			</style>
@@ -124,7 +128,17 @@
 									
 									<div class="line">
 										<div class="num"><%=dto.getNum() %></div>
-										<div class="subject"><a class="dd" onclick="ee()" href="boardinfo.jsp?num=<%=dto.getNum() %>"><%=dto.getSubject()%></a></div>
+										<%
+											if(id == ""){%>
+											<div class="subject" onclick="goLogin();"><a class="cursor"><%=dto.getSubject()%></a></div>		
+											<% } else { %>
+											<div class="subject"><a class="cursor" href="boardinfo.jsp?num=<%=dto.getNum() %>"><%=dto.getSubject()%></a></div>
+										<%		
+											}
+										%>
+										
+										
+										
 										<div class="writer"><%=dto.getWriter()%></div>
 										<div class="reg_date"><%=dto.getReg_date()%></div>
 										<div class="readcount"><%=dto.getReadcount()%></div>
@@ -144,6 +158,11 @@
 			
 			<script>
 			   	var a = "<%=id%>";
+			   	
+			   	function goLogin(){
+			   		alert('로그인후 이용해주세요.');
+			   	}
+			   	
 			   	
 				btnElem = document.querySelector('.btn');
 				btnElem.addEventListener('click', function(){

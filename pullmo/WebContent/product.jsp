@@ -85,7 +85,7 @@
 		.goods-info {
 
 			width: 268px;
-			height: 120px;
+			height: 150px;
 			background: #f7f7f7;
 
 		}

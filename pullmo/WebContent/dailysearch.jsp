@@ -6,9 +6,13 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	String id = (String) session.getAttribute("id");
+	
+	if(id == null){
+		id = "";
+	}
+	
 	ProductDAO pdao = new ProductDAO();
 	String dd = request.getParameter("searchKeyword");
-	System.out.println(dd);
 	Vector<ProductDTO> list1 = pdao.searchAll(dd);
 	int listMax = list1.size();
 %>

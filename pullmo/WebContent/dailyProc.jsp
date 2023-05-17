@@ -17,6 +17,8 @@
 
 <%
 	ProductDAO pdao = new ProductDAO();
+
+
 	pdao.productInsert(product);
 	System.out.println(product);
 %>

@@ -5,9 +5,6 @@
 			background: blue;
 		}
 
-
-
-
 		#mainImg1 {
 			width: 1903px;
 			height: 460px;
@@ -38,9 +35,12 @@
 			margin-right: 5px;
 		}
 
+		.swiper-wrapper{
+			align-items:center;
+		}
+
 		#recom {
 			width: 1200px;
-			height: 504px;
 			margin-top: 60px;
 			background: white;
 		}
@@ -63,19 +63,16 @@
 		}
 
 		.recom-goods-img {
-			height: 268px;
+			height: 240px;
 			width: 268px;
 			margin: 0;
 			border-top-left-radius: 15px;
 			border-top-right-radius: 15px;
-
 		}
 
 		.goods-info {
-			background: #f7f7f7;
 			border-radius: 0 0 15px 15px;
-			padding: 20px;
-
+			padding: 20px 5px;
 		}
 
 		.goods-brand {
@@ -93,12 +90,26 @@
 		.goods-wrap-item{
 			display:flex;
 			justify-content:space-between;
+			align-items:center;
 		}
 
 		.price-cost {
 			display: block;
 			font-size: 20px;
 			padding-top: 30px;
+		}
+		
+		.recom-item-wrap{
+			display:flex;
+			flex-wrap:wrap;
+		    
+		}
+		
+		.recom-item-wrap .recom-item{
+			box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+		    border-radius: 12px;
+		    padding: 12px 6px;
+		    margin:10px;
 		}
 
 		.recom-part {
@@ -110,8 +121,6 @@
 
 		.goods-delfree {
 			width: 69px;
-			height: 26px;
-			background: #f7f7f7;
 		}
 
 		.add-cart {
@@ -137,6 +146,7 @@
 			justify-content: center;
 			display: flex;
 			font-weight: 700;
+			margin-top:60px;
 		}
 
 		.daily-tab-list {
@@ -164,6 +174,8 @@
 			margin-top: 15px;
 
 		}
+		
+
 
 		/* 
 		.tab_content {

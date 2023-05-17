@@ -108,6 +108,7 @@ public class ProductDAO {
 	}
 	
 			public  Vector<ProductDTO> searchAll(String search) {
+				 System.out.println(search);
 				 Vector<ProductDTO> list = new Vector<>();
 				try {
 					getConnet();

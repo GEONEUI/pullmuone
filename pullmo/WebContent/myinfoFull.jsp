@@ -81,6 +81,7 @@
 	    border:none;
  	    width: 100%;
  	    outline: none;
+ 	    background:#fcfcfc;
 	}
 	
 	.myinfoBtn{

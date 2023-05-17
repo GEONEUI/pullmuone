@@ -101,8 +101,8 @@
 				<div class="gnb">
 					<ul>
 						<li><a href="daily.jsp">매일배송</a></li>
-						<li><a href="product.jsp">택배배송</a></li>
 						<li><a href="taste.jsp">시음선물</a></li>
+						<li><a href="boardList.jsp">공지사항</a></li>
 						<li><a href="event.jsp">이벤트</a></li>
 					</ul>
 				</div>
