@@ -1,14 +1,15 @@
 # http://dbrjsdml.cafe24.com/Pullmo
 
 <p>풀무원 사이트 클론 코딩 프로젝트 - 웹 개발 기술 연습과 동작 원리 파악</p>
-MVC Model1 으로 제작된 사이트입니다.
 
 <br>
 
-# 관리자 정보
-아이디 : admin <br>
-비밀번호 : xptmxm12
-
+  # <strong>관리자 정보</strong>
+  
+    * 아이디 : admin
+    * 비밀번호 : xptmxm12
+    * MVC Model1 방식으로 제작된 사이트입니다. 
+  
 <br>
 
 # 구성원
@@ -70,6 +71,7 @@ MVC Model1 으로 제작된 사이트입니다.
             <strong>계정관련</strong>
             <ul>
                 <li>로그인, 로그아웃, 회원가입, 중복조회, 내정보변경</li>
+                <li>쿠키기능 사용</li>
             </ul>
         </li><br>
         <li>
@@ -160,6 +162,14 @@ MVC Model1 으로 제작된 사이트입니다.
 
 # 참고사이트
    * 풀무원녹즙 : https://greenjuice.pulmuone.com/
+
+<br>
+
+# 추가 업데이트 계획
+    05.27 댓글 수정,삭제기능 추가
+    05.27 로그인, 로그아웃시 model로 알림창 추가
+    05.27 결제방식 추가
+
 <br>
 <br>
 
