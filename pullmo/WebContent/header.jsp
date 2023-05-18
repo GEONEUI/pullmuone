@@ -97,7 +97,7 @@
 	<div class="inner">
 		<div class="header">
 			<div class="logo-gnb-area">
-				<h1 class="logo"><a href="/pullmo/"><img src="./image/account_logo.png" alt=""></a></h1>
+				<h1 class="logo"><a href="/Pullmo/"><img src="./image/account_logo.png" alt=""></a></h1>
 				<div class="gnb">
 					<ul>
 						<li><a href="daily.jsp">매일배송</a></li>

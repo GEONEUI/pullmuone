@@ -39,7 +39,7 @@
 	.f_menu ul li a{
 			display: block;
 			padding: 20px 15px;
-			font-size: 14px;
+			font-size: 15px;
 			color: #333333;
 			letter-spacing: -1.05px;
 	}
@@ -54,7 +54,7 @@
 	.logo_copy_area .f_copy{}
 	.logo_copy_area .f_copy p{
 		display: block;
-		font-size: 14px;
+		font-size: 15px;
 		font-weight: bold;
 		color: #333333;
 		margin-bottom: 0.7rem;
@@ -65,7 +65,7 @@
 		    display: inline-block;
 			white-space: normal;
 			line-height: 23px;
-			font-size: 13px;
+			font-size: 15px;
 			color: #333333;
 			letter-spacing: -0.98px;
 			padding-right: 15px;
@@ -80,12 +80,13 @@
 
 	em{
 	color: #222;
-    font-size: 10px;
+    font-size: 14px;
     display: block;
     text-transform: uppercase;
     padding-top: 16px;
     font-family: Roboto, Sans-serif;
     letter-spacing: -0.25px;
+    font-style: italic;
 	}
 
 

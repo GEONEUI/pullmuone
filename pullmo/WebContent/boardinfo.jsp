@@ -62,8 +62,8 @@
 				.ad .subject{padding-bottom:10px; font-weight:bold; font-size:25px;}
 				.ad ul{display:flex; font-size:17px; color:#555; padding-bottom:50px;}
 				.ad ul li{margin-right:10px;}
-				.ad .context{font-size:20px;}
-				
+				.ad .context{font-size:17px; padding:15px; width:100%; border-style:none;}
+				textarea:focus {outline: none;}
 				.reple .reple_item{border-bottom:1px solid #e5e5e5; padding:25px; background: #f7f7f7;}
 				
 				.reple ul{display:flex; margin-bottom:10px;}
@@ -122,7 +122,7 @@
 										<li>작성자 : <%=bdto.getWriter() %></li>
 										<li>작성날짜 : <%=bdto.getReg_date() %></li>
 									</ul>
-									<pre class="context"><%=bdto.getContext()%></pre>
+									<textarea rows="20" readonly="readonly" class="context"><%=bdto.getContext()%></textarea>
 								</div>
 							</div>
 							<div class="reple">

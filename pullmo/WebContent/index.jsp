@@ -95,7 +95,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="sec_banner">
+	<div class="sec_banner" onclick="goTest();">
 		<img src="./image/banner1.png" alt="">
 	</div>
 	<div class="sec_ad">
@@ -177,6 +177,11 @@
 				prevEl: ".swiper-button-prev",
 			},
 		});
+		
+		function goTest(){
+			alert('서비스 준비중 입니다.');
+		}
+		
 	</script>
 </body>
 

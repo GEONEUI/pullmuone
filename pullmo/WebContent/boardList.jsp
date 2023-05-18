@@ -161,13 +161,15 @@
 			   	
 			   	function goLogin(){
 			   		alert('로그인후 이용해주세요.');
+			   		location.href="login.jsp";
 			   	}
 			   	
 			   	
 				btnElem = document.querySelector('.btn');
 				btnElem.addEventListener('click', function(){
-					if(a == "1"){
-						alert('로그인이 필요한 서비스입니다.')
+					if(a == ""){
+						alert('로그인후 이용해주세요.');
+						location.href="login.jsp";
 					}else{
 						location.href="boardWriteForm.jsp";
 					}

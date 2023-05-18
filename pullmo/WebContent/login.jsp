@@ -167,9 +167,9 @@ if(cookies != null){
 					회원가입하고 다양한 혜택을 누리세요
 				</h2>
 				<ul class="footerAD_icon">
-					<li><figure><img src="./image/l_icon1.png" alt=""></figure><p>음용할수록 늘어나는 혜택!</p></li>
-					<li><figure><img src="./image/l_icon1.png" alt=""></figure><p>음용할수록 늘어나는 혜택!</p></li>
-					<li><figure><img src="./image/l_icon1.png" alt=""></figure><p>음용할수록 늘어나는 혜택!</p></li>
+					<li><figure><img src="./image/l_icon1.png" alt=""></figure><p>건강을 위한 최고의 파트너!</p></li>
+					<li><figure><img src="./image/l_icon1.png" alt=""></figure><p>건강한 습관의 시작!</p></li>
+					<li><figure><img src="./image/l_icon1.png" alt=""></figure><p>밋과 건강을 한 번에!</p></li>
 					<li><figure><img src="./image/l_icon1.png" alt=""></figure><p>음용할수록 늘어나는 혜택!</p></li>
 				</ul>
 			</div>

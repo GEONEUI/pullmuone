@@ -12,7 +12,7 @@ public class CartDAO {
 
 	String id = "dbrjsdml";
 	String pw = "xptmxm12!";
-	String url = "jdbc:mariadb://183.111.138.245:3306/dbrjsdml";
+	String url = "jdbc:mariadb://localhost:3306/dbrjsdml";
 	
 	Connection conn;
 	PreparedStatement pstmt;
